@@ -32,9 +32,9 @@ import net.runelite.client.config.ConfigItem;
 public interface TimersConfig extends Config
 {
 	@ConfigItem(
-		keyName = "showHomeMinigameTeleports",
-		name = "Teleport cooldown timers",
-		description = "Configures whether timers for home and minigame teleport cooldowns are displayed"
+			keyName = "showHomeMinigameTeleports",
+			name = "Teleport cooldown timers",
+			description = "Configures whether timers for home and minigame teleport cooldowns are displayed"
 	)
 	default boolean showHomeMinigameTeleports()
 	{
@@ -42,9 +42,9 @@ public interface TimersConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "showAntipoison",
-		name = "Antipoison/Venom timers",
-		description = "Configures whether timers for Antipoison, Antidote and Antivenom are displayed"
+			keyName = "showAntipoison",
+			name = "Antipoison/Venom timers",
+			description = "Configures whether timers for Antipoison, Antidote and Antivenom are displayed"
 	)
 	default boolean showAntiPoison()
 	{
@@ -52,9 +52,9 @@ public interface TimersConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "showAntiFire",
-		name = "Antifire timer",
-		description = "Configures whether antifire timer is displayed"
+			keyName = "showAntiFire",
+			name = "Antifire timer",
+			description = "Configures whether antifire timer is displayed"
 	)
 	default boolean showAntiFire()
 	{
@@ -62,9 +62,9 @@ public interface TimersConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "showStamina",
-		name = "Stamina timer",
-		description = "Configures whether stamina timer is displayed"
+			keyName = "showStamina",
+			name = "Stamina timer",
+			description = "Configures whether stamina timer is displayed"
 	)
 	default boolean showStamina()
 	{
@@ -72,9 +72,9 @@ public interface TimersConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "showOverload",
-		name = "Overload timer",
-		description = "Configures whether overload timer is displayed"
+			keyName = "showOverload",
+			name = "Overload timer",
+			description = "Configures whether overload timer is displayed"
 	)
 	default boolean showOverload()
 	{
@@ -82,9 +82,9 @@ public interface TimersConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "showPrayerEnhance",
-		name = "Prayer enhance timer",
-		description = "Configures whether prayer enhance timer is displayed"
+			keyName = "showPrayerEnhance",
+			name = "Prayer enhance timer",
+			description = "Configures whether prayer enhance timer is displayed"
 	)
 	default boolean showPrayerEnhance()
 	{
@@ -92,9 +92,9 @@ public interface TimersConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "showDivine",
-		name = "Divine potion timer",
-		description = "Configures whether divine potion timer is displayed"
+			keyName = "showDivine",
+			name = "Divine potion timer",
+			description = "Configures whether divine potion timer is displayed"
 	)
 	default boolean showDivine()
 	{
@@ -102,9 +102,9 @@ public interface TimersConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "showCannon",
-		name = "Cannon timer",
-		description = "Configures whether cannon timer is displayed"
+			keyName = "showCannon",
+			name = "Cannon timer",
+			description = "Configures whether cannon timer is displayed"
 	)
 	default boolean showCannon()
 	{
@@ -112,9 +112,9 @@ public interface TimersConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "showMagicImbue",
-		name = "Magic imbue timer",
-		description = "Configures whether magic imbue timer is displayed"
+			keyName = "showMagicImbue",
+			name = "Magic imbue timer",
+			description = "Configures whether magic imbue timer is displayed"
 	)
 	default boolean showMagicImbue()
 	{
@@ -122,9 +122,9 @@ public interface TimersConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "showCharge",
-		name = "Charge timer",
-		description = "Configures whether to show a timer for the Charge spell"
+			keyName = "showCharge",
+			name = "Charge timer",
+			description = "Configures whether to show a timer for the Charge spell"
 	)
 	default boolean showCharge()
 	{
@@ -132,9 +132,9 @@ public interface TimersConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "showImbuedHeart",
-		name = "Imbued heart timer",
-		description = "Configures whether imbued heart timer is displayed"
+			keyName = "showImbuedHeart",
+			name = "Imbued heart timer",
+			description = "Configures whether imbued heart timer is displayed"
 	)
 	default boolean showImbuedHeart()
 	{
@@ -142,9 +142,9 @@ public interface TimersConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "showVengeance",
-		name = "Vengeance timer",
-		description = "Configures whether vengeance and vengeance other timer is displayed"
+			keyName = "showVengeance",
+			name = "Vengeance timer",
+			description = "Configures whether vengeance and vengeance other timer is displayed"
 	)
 	default boolean showVengeance()
 	{
@@ -152,9 +152,9 @@ public interface TimersConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "showVengeanceActive",
-		name = "Vengeance active",
-		description = "Configures whether an indicator for vengeance being active is displayed"
+			keyName = "showVengeanceActive",
+			name = "Vengeance active",
+			description = "Configures whether an indicator for vengeance being active is displayed"
 	)
 	default boolean showVengeanceActive()
 	{
@@ -162,9 +162,9 @@ public interface TimersConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "showTeleblock",
-		name = "Teleblock timer",
-		description = "Configures whether teleblock timer is displayed"
+			keyName = "showTeleblock",
+			name = "Teleblock timer",
+			description = "Configures whether teleblock timer is displayed"
 	)
 	default boolean showTeleblock()
 	{
@@ -172,9 +172,9 @@ public interface TimersConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "showFreezes",
-		name = "Freeze timer",
-		description = "Configures whether freeze timer is displayed"
+			keyName = "showFreezes",
+			name = "Freeze timer",
+			description = "Configures whether freeze timer is displayed"
 	)
 	default boolean showFreezes()
 	{
@@ -182,9 +182,9 @@ public interface TimersConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "showGodWarsAltar",
-		name = "God wars altar timer",
-		description = "Configures whether god wars altar timer is displayed"
+			keyName = "showGodWarsAltar",
+			name = "God wars altar timer",
+			description = "Configures whether god wars altar timer is displayed"
 	)
 	default boolean showGodWarsAltar()
 	{
@@ -192,9 +192,9 @@ public interface TimersConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "showStaffOfTheDead",
-		name = "Staff of the Dead timer",
-		description = "Configures whether staff of the dead timer is displayed"
+			keyName = "showStaffOfTheDead",
+			name = "Staff of the Dead timer",
+			description = "Configures whether staff of the dead timer is displayed"
 	)
 	default boolean showStaffOfTheDead()
 	{
@@ -202,9 +202,9 @@ public interface TimersConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "showAbyssalSireStun",
-		name = "Abyssal Sire stun timer",
-		description = "Configures whether Abyssal Sire stun timer is displayed"
+			keyName = "showAbyssalSireStun",
+			name = "Abyssal Sire stun timer",
+			description = "Configures whether Abyssal Sire stun timer is displayed"
 	)
 	default boolean showAbyssalSireStun()
 	{
@@ -212,9 +212,9 @@ public interface TimersConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "showDfsSpecial",
-		name = "Dragonfire Shield special timer",
-		description = "Configures whether the special attack cooldown timer for the Dragonfire Shield is displayed"
+			keyName = "showDfsSpecial",
+			name = "Dragonfire Shield special timer",
+			description = "Configures whether the special attack cooldown timer for the Dragonfire Shield is displayed"
 	)
 	default boolean showDFSSpecial()
 	{

@@ -24,6 +24,10 @@
  */
 package net.runelite.api.widgets;
 
+import javafx.scene.SnapshotResult;
+
+import java.rmi.StubNotFoundException;
+
 /**
  * Utility class mapping widget IDs to global constants.
  * <p>
@@ -119,7 +123,6 @@ public class WidgetID
 	public static final int MINIGAME_TAB_ID = 76;
 	public static final int SPELLBOOK_GROUP_ID = 218;
 	public static final int PVP_GROUP_ID = 90;
-	public static final int FISHING_TRAWLER_GROUP_ID = 366;
 	public static final int ZEAH_MESS_HALL_GROUP_ID = 235;
 	public static final int KOUREND_FAVOUR_GROUP_ID = 246;
 	public static final int LOOTING_BAG_GROUP_ID = 81;
@@ -128,21 +131,6 @@ public class WidgetID
 	public static final int FULLSCREEN_MAP_GROUP_ID = 165;
 	public static final int QUESTLIST_GROUP_ID = 399;
 	public static final int SKILLS_GROUP_ID = 320;
-	public static final int QUESTTAB_GROUP_ID = 629;
-	public static final int MUSIC_GROUP_ID = 239;
-	public static final int BARROWS_PUZZLE_GROUP_ID = 25;
-	public static final int KEPT_ON_DEATH_GROUP_ID = 4;
-	public static final int GUIDE_PRICE_GROUP_ID = 464;
-	public static final int SEED_VAULT_INVENTORY_GROUP_ID = 630;
-	public static final int BEGINNER_CLUE_MAP_CHAMPIONS_GUILD = 346;
-	public static final int BEGINNER_CLUE_MAP_VARROCK_EAST_MINE = 347;
-	public static final int BEGINNER_CLUE_MAP_DRAYNOR = 348;
-	public static final int BEGINNER_CLUE_MAP_NORTH_OF_FALADOR = 351;
-	public static final int BEGINNER_CLUE_MAP_WIZARDS_TOWER = 356;
-	public static final int SEED_BOX_GROUP_ID = 128;
-	public static final int ITEMS_KEPT_ON_DEATH_GROUP_ID = 4;
-	public static final int SEED_VAULT_GROUP_ID = 631;
-	public static final int EXPLORERS_RING_ALCH_GROUP_ID = 483;
 
 	static class WorldMap
 	{
@@ -214,9 +202,9 @@ public class WidgetID
 	static class ClanChat
 	{
 		static final int TITLE = 1;
-		static final int NAME = 4;
-		static final int OWNER = 6;
-		static final int LIST = 16;
+		static final int NAME = 3;
+		static final int OWNER = 5;
+		static final int LIST = 15;
 	}
 
 	static class Bank
@@ -225,7 +213,6 @@ public class WidgetID
 		static final int INVENTORY_ITEM_CONTAINER = 3;
 		static final int BANK_TITLE_BAR = 4;
 		static final int CONTENT_CONTAINER = 10;
-		static final int TAB_CONTAINER = 11;
 		static final int ITEM_CONTAINER = 13;
 		static final int SEARCH_BUTTON_BACKGROUND = 40;
 		static final int DEPOSIT_INVENTORY = 42;
@@ -293,7 +280,6 @@ public class WidgetID
 	{
 		static final int EMOTE_WINDOW = 0;
 		static final int EMOTE_CONTAINER = 1;
-		static final int EMOTE_SCROLLBAR = 2;
 	}
 
 	static class Cluescroll
@@ -524,20 +510,22 @@ public class WidgetID
 	static class Combat
 	{
 		static final int WEAPON_NAME = 1;
-		static final int LEVEL = 3;
-		static final int STYLE_ONE = 4;
-		static final int STYLE_TWO = 8;
-		static final int STYLE_THREE = 12;
-		static final int STYLE_FOUR = 16;
-		static final int SPELLS = 20;
-		static final int DEFENSIVE_SPELL_BOX = 21;
-		static final int DEFENSIVE_SPELL_ICON = 23;
-		static final int DEFENSIVE_SPELL_SHIELD = 24;
-		static final int DEFENSIVE_SPELL_TEXT = 25;
-		static final int SPELL_BOX = 26;
-		static final int SPELL_ICON = 28;
-		static final int SPELL_TEXT = 29;
-		static final int AUTO_RETALIATE = 30;
+		static final int LEVEL = 2;
+		static final int STYLE_ONE = 3;
+		static final int STYLE_TWO = 7;
+		static final int STYLE_THREE = 11;
+		static final int STYLE_FOUR = 15;
+		static final int SPELLS = 19;
+		static final int DEFENSIVE_SPELL_BOX = 20;
+		static final int DEFENSIVE_SPELL_ICON = 22;
+		static final int DEFENSIVE_SPELL_SHIELD = 23;
+		static final int DEFENSIVE_SPELL_TEXT = 24;
+		static final int SPELL_BOX = 25;
+		static final int SPELL_ICON = 27;
+		static final int SPELL_TEXT = 28;
+		static final int AUTO_RETALIATE = 29;
+		static final int SPECIAL_BAR_CONTAINER = 34;
+		static final int SPECIAL_BAR = 35;
 	}
 
 	static class VolcanicMine
@@ -716,16 +704,154 @@ public class WidgetID
 	static class StandardSpellBook
 	{
 		static final int LUMBRIDGE_HOME_TELEPORT = 4;
+		static final int WIND_STRIKE = 5;
+		static final int CONFUSE = 6;
+		static final int ENCHANT_CROSSBOW_BOLT = 7;
+		static final int WATER_STRIKE = 8;
+		static final int LVL_1_ENCHANT = 9;
+		static final int EARTH_STRIKE = 10;
+		static final int WEAKEN = 11;
+		static final int FIRE_STRIKE = 12;
+		static final int BONES_TO_BANANAS = 13;
+		static final int WIND_BOLT = 14;
+		static final int CURSE = 15;
+		static final int BIND = 16;
+		static final int LOW_LEVEL_ALCHEMY = 17;
+		static final int WATER_BOLT = 18;
+		static final int VARROCK_TELEPORT = 19;
+		static final int LVL_2_ENCHANT = 20;
+		static final int EARTH_BOLT = 21;
+		static final int LUMBRIDGE_TELEPORT = 22;
+		static final int TELEKINETIC_GRAB = 23;
+		static final int FIRE_BOLT = 24;
+		static final int FALADOR_TELEPORT = 25;
+		static final int CRUMBLE_UNDEAD = 26;
+		static final int TELEPORT_TO_HOUSE = 27;
+		static final int WIND_BLAST = 28;
+		static final int SUPERHEAT_ITEM = 29;
+		static final int CAMELOT_TELEPORT = 30;
+		static final int WATER_BLAST = 31;
+		static final int LVL_3_ENCHANT = 32;
+		static final int IBAN_BLAST = 33;
+		static final int SNARE = 34;
+		static final int MAGIC_DART = 35;
+		static final int ARDOUGNE_TELEPORT = 36;
+		static final int EARTH_BLAST = 37;
+		static final int HIGH_LEVEL_ALCHEMY = 38;
+		static final int CHARGE_WATER_ORB = 39;
+		static final int LVL_4_ENCHANT = 40;
+		static final int WATCHTOWER_TELEPORT = 41;
+		static final int FIRE_BLAST = 42;
+		static final int CHARGE_EARTH_ORB = 43;
+		static final int BONES_TO_PEACHES = 44;
+		static final int SARADOMIN_STRIKE = 45;
+		static final int CLAWS_OF_GUTHIX = 46;
+		static final int FLAMES_OF_ZAMORAK = 47;
+		static final int TROLLHEIM_TELEPORT = 48;
+		static final int WIND_WAVE = 49;
+		static final int HARGE_FIRE_ORB = 50;
+		static final int TELEPORT_TO_APE_ATOLL = 51;
+		static final int WATER_WAVE = 52;
+		static final int CHARGE_AIR_ORB = 53;
+		static final int VULNERABILITY = 54;
+		static final int LVL_5_ENCHANT = 55;
+		static final int TELEPORT_TO_KOUREND = 56;
+		static final int EARTH_WAVE = 57;
+		static final int ENFEEBLE = 58;
+		static final int TELEOTHER_LUMBRIDGE = 59;
+		static final int FIRE_WAVE = 60;
+		static final int ENTANGLE = 61;
+		static final int STUN = 62;
+		static final int CHARGE = 63;
+		static final int WIND_SURGE = 64;
+		static final int TELEOTHER_FALADOR = 65;
+		static final int WATER_SURGE = 66;
+		static final int TELE_BLOCK = 67;
+		static final int BOUNTY_TARGET_TELEPORT = 68;
+		static final int LVL_6_ENCHANT = 69;
+		static final int TELEOTHER_CAMELOT = 70;
+		static final int EARTH_SURGE = 71;
+		static final int LVL_7_ENCHANT = 72;
+		static final int FIRE_SURGE = 73;
 	}
 
 	static class AncientSpellBook
 	{
+		static final int BOUNTY_TARGET_TELEPORT = 68;
+		static final int ICE_RUSH = 74;
+		static final int ICE_BLITZ = 75;
+		static final int ICE_BURST = 76;
+		static final int ICE_BARRAGE = 77;
+		static final int BLOOD_RUSH = 78;
+		static final int BLOOD_BLITZ = 79;
+		static final int BLOOD_BURST = 80;
+		static final int BLOOD_BARRAGE = 81;
+		static final int SMOKE_RUSH = 82;
+		static final int SMOKE_BLITZ = 83;
+		static final int SMOKE_BURST = 84;
+		static final int SMOKE_BARRAGE = 85;
+		static final int SHADOW_RUSH = 86;
+		static final int SHADOW_BLITZ = 87;
+		static final int SHADOW_BURST = 88;
+		static final int SHADOW_BARRAGE = 89;
+		static final int PADDEWWA_TELEPORT = 90;
+		static final int SENNTISTEN_TELEPORT = 91;
+		static final int KHARYRLL_TELEPORT = 92;
+		static final int LASSAR_TELEPORT = 93;
+		static final int DAREEYAK_TELEPORT = 94;
+		static final int CARRALLANGER_TELEPORT = 95;
+		static final int ANNAKARL_TELEPORT = 96;
+		static final int GHORROCK_TELEPORT = 97;
 		static final int EDGEVILLE_HOME_TELEPORT = 98;
 	}
 
 	static class LunarSpellBook
 	{
+		static final int BOUNTY_TARGET_TELEPORT = 68;
 		static final int LUNAR_HOME_TELEPORT = 99;
+		static final int BAKE_PIE = 100;
+		static final int CURE_PLANT = 101;
+		static final int MONSTER_EXAMINE = 102;
+		static final int NPC_CONTACT = 103;
+		static final int CURE_OTHER = 104;
+		static final int HUMIDIFY = 105;
+		static final int MOONCLAN_TELEPORT = 106;
+		static final int TELE_GROUP_MOONCLAN = 107;
+		static final int CURE_ME = 108;
+		static final int HUNTER_KIT = 109;
+		static final int WATERBIRTH_TELEPORT = 110;
+		static final int TELE_GROUP_WATERBIRTH = 111;
+		static final int CURE_GROUP = 112;
+		static final int STAT_SPY = 113;
+		static final int BARBARIAN_TELEPORT = 114;
+		static final int TELE_GROUP_BARBARIAN = 115;
+		static final int SUPERGLASS_MAKE = 116;
+		static final int TAN_LEATHER = 117;
+		static final int KHAZARD_TELEPORT = 118;
+		static final int TELE_GROUP_KHAZARD = 119;
+		static final int DREAM = 120;
+		static final int STRING_JEWELLERY = 121;
+		static final int STAT_RESTORE_POT_SHARE = 122;
+		static final int MAGIC_IMBUE = 123;
+		static final int FERTILE_SOIL = 124;
+		static final int BOOST_POTION_SHARE = 125;
+		static final int FISHING_GUILD_TELEPORT = 126;
+		static final int TELE_GROUP_FISHING_GUILD = 127;
+		static final int PLANK_MAKE = 128;
+		static final int CATHERBY_TELEPORT = 129;
+		static final int TELE_GROUP_CATHERBY = 130;
+		static final int RECHARGE_DRAGONSTONE = 131;
+		static final int ICE_PLATEAU_TELEPORT = 132;
+		static final int TELE_GROUP_ICE_PLATEAU = 133;
+		static final int ENERGY_TRANSFER = 134;
+		static final int HEAL_OTHER = 135;
+		static final int VENGEANCE_OTHER = 136;
+		static final int VENGEANCE = 137;
+		static final int HEAL_GROUP = 138;
+		static final int SPELLBOOK_SWAP = 139;
+		static final int GEOMANCY = 140;
+		static final int SPIN_FLAX = 141;
+		static final int OURANIA_TELEPORT = 142;
 	}
 
 	static class ArceuusSpellBook
@@ -735,11 +861,16 @@ public class WidgetID
 
 	static class Pvp
 	{
-		static final int BOUNTY_HUNTER_INFO = 18;
-		static final int KILLDEATH_RATIO = 15;
-		static final int SKULL_CONTAINER = 61;
-		static final int SAFE_ZONE = 63;
-		static final int WILDERNESS_LEVEL = 66; // this can also be the Deadman Mode "Protection" text
+		static final int BOUNTY_HUNTER_INFO = 6;
+		static final int KILLDEATH_RATIO = 9;
+		static final int BOUNTY_HUNTER_STATS = 28;
+		static final int PVP_WIDGET_CONTAINER = 54;
+		static final int SKULL_CONTAINER = 55;
+		static final int SKULL = 56;
+		static final int SAFE_ZONE = 57;
+		static final int ATTACK_RANGE = 59;
+		static final int WILDERNESS_LEVEL = 60; // this can also be the Deadman Mode "Protection" text
+		static final int DEADMAN_PROTECTION_TIME = 61;
 	}
 
 	static class KourendFavour
@@ -769,69 +900,8 @@ public class WidgetID
 
 	static class QuestList
 	{
-		static final int BOX = 0;
-		static final int SCROLLBAR = 3;
-		static final int CONTAINER = 5;
 		static final int FREE_CONTAINER = 6;
 		static final int MEMBERS_CONTAINER = 7;
 		static final int MINIQUEST_CONTAINER = 8;
-	}
-
-	static class QuestTab
-	{
-		static final int QUEST_TAB = 3;
-	}
-
-	static class Music
-	{
-		static final int CONTAINER = 0;
-		static final int LIST = 3;
-		static final int SCROLLBAR = 4;
-	}
-
-	static class Barrows_Puzzle
-	{
-		static final int PARENT = 0;
-		static final int CONTAINER = 1;
-		static final int TOP_ROW_PUZZLE = 2;
-		static final int SEQUENCE_1 = 3;
-		static final int SEQUENCE_1_TEXT = 4;
-		static final int SEQUENCE_2 = 5;
-		static final int SEQUENCE_2_TEXT = 6;
-		static final int SEQUENCE_3 = 7;
-		static final int SEQUENCE_3_TEXT = 8;
-		static final int SEQUENCE_4 = 9;
-		static final int SEQUENCE_4_TEXT = 10;
-		static final int NEXT_SHAPE_TEXT = 11;
-		static final int ANSWER1_CONTAINER = 12;
-		static final int ANSWER1 = 13;
-		static final int ANSWER2_CONTAINER = 14;
-		static final int ANSWER2 = 15;
-		static final int ANSWER3_CONTAINER = 16;
-		static final int ANSWER3 = 17;
-	}
-
-	static class KeptOnDeath
-	{
-		static final int KEPT_ITEMS_TEXT = 17;
-		static final int KEPT_ITEMS_CONTAINER = 18;
-		static final int LOST_ITEMS_TEXT = 20;
-		static final int LOST_ITEMS_CONTAINER = 21;
-		static final int LOST_ITEMS_VALUE = 23;
-		static final int INFORMATION_CONTAINER = 29;
-		static final int MAX_ITEMS_KEPT_ON_DEATH = 30;
-		static final int SAFE_ZONE_CONTAINER = 31;
-	}
-
-	static class SeedVault
-	{
-		static final int TITLE_CONTAINER = 2;
-		static final int ITEM_CONTAINER = 15;
-		static final int ITEM_TEXT = 16;
-	}
-
-	static class ExplorersRing
-	{
-		static final int INVENTORY = 7;
 	}
 }

@@ -252,6 +252,7 @@ public class ItemManager
 		}
 	}
 
+
 	@Subscribe
 	public void onPostItemComposition(PostItemComposition event)
 	{

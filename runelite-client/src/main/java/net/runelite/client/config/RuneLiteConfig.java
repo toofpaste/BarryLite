@@ -273,4 +273,15 @@ public interface RuneLiteConfig extends Config
 	{
 		return 35;
 	}
+
+	@ConfigItem(
+			keyName = "enablePlugins",
+			name = "Enable loading of external plugins",
+			description = "Enable loading of external plugins",
+			position = 43
+	)
+	default boolean enablePlugins()
+	{
+		return true;
+	}
 }

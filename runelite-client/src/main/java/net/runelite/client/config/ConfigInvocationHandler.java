@@ -101,7 +101,7 @@ class ConfigInvocationHandler implements InvocationHandler
 
 			// Convert value to return type
 			Class<?> returnType = method.getReturnType();
-			
+
 			try
 			{
 				Object objectValue = ConfigManager.stringToObject(value, returnType);
